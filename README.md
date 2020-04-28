@@ -12,6 +12,7 @@ This challenge is composed of 5 levels of difficulty which will be listed below.
 - The microsite should be deployed to the PaaS of your choice.
 - You must solve the levels in ascending order.
 - You must commit your code at the end of each level.
+- Use create-react-app to set up a basic single-page React application as shown here: https://reactjs.org/docs/create-a-new-react-app.html#create-react-app.
 
 You can have a look at the higher levels, but do the simplest thing that could work for the level you're currently solving.
 Each level uses the previous one, you can reuse your old code.
