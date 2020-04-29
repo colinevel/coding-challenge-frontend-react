@@ -36,7 +36,9 @@ When this is done, you can move on to the next step.
 
 ## Level 2
 
-The purpose of this second level is to update the user information that you previously retrieved and displayed in the previous step. The API provided at the beginning of this challenge allows the modification of each entity.
+In this level you will have to update the user information that you previously retrieved and displayed. 
+
+The API provided at the beginning of this challenge allows the modification of each entity.
 
 To do this, you will need to pass a specific `Content-Type`.
 
@@ -44,25 +46,22 @@ When this is done, you can move on to the next step.
 
 ## Level 3
 
-The purpose of this third level is to display user posts. you can call a new route to retrieve the posts of a particular user from his ID, as follows: `https://jsonplaceholder.typicode.com/posts?userId=1`
+Here you need to display user posts. you can call a new route to retrieve the posts of a particular user from his ID, as follows: https://jsonplaceholder.typicode.com/posts?userId=1
 
 When this is done, you can move on to the next step.
 
-
 ## Level 4
 
-The goal of this fourth level is to display the comments related to each post, you can call a new route to retrieve the comments of a particular post from his ID, as follows: `https://jsonplaceholder.typicode.com/comments?postId=1`
+The goal of this fourth level is to display the comments related to each post, you can call a new route to retrieve the comments of a
+particular post from his ID, as follows: https://jsonplaceholder.typicode.com/comments?postId=1
 
 When this is done, you can move on to the next step.
 
 ## Level 5
 
-The purpose of this fifth level (the last one, courage 👊) is now to develop a delete function.
-
+This is the last one, courage 👊, now you need to develop a delete function.
 On the first page you have developed, you will now be able to delete a user.
-
 if the user has been deleted, all of these messages and comments should be deleted
-
 The query de delete a user can be done simply as below:
 
 ```
