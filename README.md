@@ -1,77 +1,68 @@
-# coding-challenge-frontend-react
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Welcome to Front-End coding challenge!
+## Available Scripts
 
-Your challenge will be to develop a microsite allowing interaction with a test API https://jsonplaceholder.typicode.com, https://jsonplaceholder.typicode.com/guide.html.
+In the project directory, you can run:
 
-This challenge is composed of 5 levels of difficulty which will be listed below.
+### `npm start`
 
-## Guidelines
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- Challenge is submitted as pull request against this repo ([fork it](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) and [create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)).
-- The microsite should be deployed to the PaaS of your choice.
-- You must solve the levels in ascending order.
-- You must commit your code at the end of each level.
-- Use create-react-app to set up a basic single-page React application as shown here: https://reactjs.org/docs/create-a-new-react-app.html#create-react-app.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-You can have a look at the higher levels, but do the simplest thing that could work for the level you're currently solving.
-Each level uses the previous one, you can reuse your old code.
-Don't hesitate to write shameless code at first, and then refactor it in the next levels.
+### `npm test`
 
-### Bonus
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Decent UX and UI (responsiveness...).
-- Use Redux
+### `npm run build`
 
-### Things that are important to us
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Code quality, maintainability and readability.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-## Level 1
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-The purpose of this first level is to retrieve users from the following API https://jsonplaceholder.typicode.com/users and to display information of each user.
+### `npm run eject`
 
-When this is done, you can move on to the next step.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Level 2
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-In this level you will have to update the user information that you previously retrieved and displayed. 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-The API provided at the beginning of this challenge allows the modification of each entity.
+## Learn More
 
-To do this, you will need to pass a specific `Content-Type`.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-When this is done, you can move on to the next step.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Level 3
+### Code Splitting
 
-Here you need to display user posts. you can call a new route to retrieve the posts of a particular user from his ID, as follows: https://jsonplaceholder.typicode.com/posts?userId=1
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-When this is done, you can move on to the next step.
+### Analyzing the Bundle Size
 
-## Level 4
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-The goal of this fourth level is to display the comments related to each post, you can call a new route to retrieve the comments of a
-particular post from his ID, as follows: https://jsonplaceholder.typicode.com/comments?postId=1
+### Making a Progressive Web App
 
-When this is done, you can move on to the next step.
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-## Level 5
+### Advanced Configuration
 
-This is the last one, courage 👊, now you need to develop a delete function.
-On the first page you have developed, you will now be able to delete a user.
-if the user has been deleted, all of these messages and comments should be deleted
-The query de delete a user can be done simply as below:
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-```
-fetch('https://jsonplaceholder.typicode.com/users/1', {
-  method: 'DELETE'
-})
-```
+### Deployment
 
-### Congratulations 🥳
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-You've completed all the levels! Don't forget to submit your pull request so we can review your challenge and get back to you as soon as possible.
+### `npm run build` fails to minify
 
-Thank you very much
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
