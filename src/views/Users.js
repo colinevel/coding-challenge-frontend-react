@@ -14,8 +14,11 @@ const loadUsersData = async() => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await response.json();
     setUsers(data);
-    console.log(data);
 }
+
+    if (!users.length) {
+    return <p>Loading ...</p>;
+    }
 
     return (
         <React.Fragment>

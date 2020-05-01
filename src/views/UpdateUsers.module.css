@@ -4,11 +4,11 @@
     align-items: center;
 }
 
-.InputsForm label {
+.InputsForm > label {
     align-self: left;
 }
 
-.InputsForm input {
+.InputsForm > input {
     width: 40vw;
     height: 3vh;
 }

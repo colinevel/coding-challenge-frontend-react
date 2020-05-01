@@ -3,6 +3,7 @@ import './App.css';
 import Users from "./views/Users";
 import UpdateUsers from "./views/UpdateUsers";
 import UserPosts from "./views/UserPosts";
+import PostComments from "./views/PostComments";
 import { Route, Switch } from "react-router-dom";
 
 
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" component={Users} />
         <Route path="/update/:id" component = {UpdateUsers} />
         <Route path="/user/:id/posts" component = {UserPosts} />
+        <Route path="/comments/:id" component = {PostComments} />
       </Switch>
     </div>
   );

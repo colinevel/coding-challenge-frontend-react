@@ -25,10 +25,12 @@ export default withRouter(function User(props) {
                 companyCatchPhrase={props.company.catchPhrase}
                 companyBS={props.company.bs}
             />
+            <div className={styles.ButtonsContainer}>
             <Link to={`/update/${props.id}`}><button>Update user</button>
             </Link>
             <Link to={`/user/${props.id}/posts`}><button>Display posts</button>
             </Link>
+            </div>
         </li>
     )
 })

@@ -6,4 +6,18 @@
   text-align: center;
 }
 
+button {
+  margin: 2vh auto;
+  padding: 1vh 2vw;
+  background-color: rgb(20, 120, 219);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:  rgb(19, 106, 193)
+}
 

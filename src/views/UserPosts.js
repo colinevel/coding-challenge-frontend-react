@@ -10,12 +10,15 @@ const loadPostsData = async() => {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${props.match.params.id}`);
     const data = await response.json();
     setPosts(data);
-    console.log(data);
 }
 
 useEffect(() => {
 loadPostsData();
 }, []);
+
+    if (!posts.length) {
+    return <p>Loading ...</p>;
+    }
 
     return (
         <React.Fragment>

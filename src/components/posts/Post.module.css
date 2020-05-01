@@ -6,7 +6,7 @@
     padding: 2vh;
 }
 
-.Post p, h3 {
+.Post > p, .Post > h3 {
     align-self: center;
     max-width: 40vw;
 }
