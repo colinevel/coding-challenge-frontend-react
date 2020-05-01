@@ -7,10 +7,10 @@ export default function Users() {
 const [users, setUsers] = useState([]);
 
 useEffect(() => {
-loadUserData();
+loadUsersData();
 }, []);
 
-const loadUserData = async() => {
+const loadUsersData = async() => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await response.json();
     setUsers(data);
@@ -24,6 +24,7 @@ const loadUserData = async() => {
             {users.map((user) =>(
                 <User 
                  key={user.id}
+                 id={user.id}
                  name={user.name}
                  username={user.username}
                  email={user.email}

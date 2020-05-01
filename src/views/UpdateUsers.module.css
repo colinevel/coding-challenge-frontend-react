@@ -1,0 +1,29 @@
+.InputsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.InputsForm label {
+    align-self: left;
+}
+
+.InputsForm input {
+    width: 40vw;
+    height: 3vh;
+}
+
+.Button {
+    margin: 2vh auto;
+    padding: 1vh 2vw;
+    background-color: rgb(20, 120, 219);
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background-color:  rgb(19, 106, 193)
+}
