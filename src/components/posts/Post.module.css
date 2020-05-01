@@ -1,0 +1,12 @@
+.Post {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 3vh;
+    padding: 2vh;
+}
+
+.Post p, h3 {
+    align-self: center;
+    max-width: 40vw;
+}
