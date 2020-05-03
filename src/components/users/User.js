@@ -6,7 +6,6 @@ import { Link, withRouter } from "react-router-dom";
 
 export default withRouter(function User(props) {
 
-
     return (
         <li className={styles.User}>
             <h2>{props.name}</h2>
@@ -28,8 +27,9 @@ export default withRouter(function User(props) {
             <div className={styles.ButtonsContainer}>
             <Link to={`/update/${props.id}`}><button>Update user</button>
             </Link>
-            <Link to={`/user/${props.id}/posts`}><button>Display posts</button>
+            <Link to={`/user/${props.id}/posts`} ><button>Display posts</button>
             </Link>
+            <button onClick={()=>{props.deleteUser(props.id)}}>Delete user</button>
             </div>
         </li>
     )

@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import User from "../components/users/User";
 import styles from "./Users.module.css";
 
-export default function Users() {
+export default function Users(props) {
 
-const [users, setUsers] = useState([]);
-
-useEffect(() => {
-loadUsersData();
-}, []);
-
-const loadUsersData = async() => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const data = await response.json();
-    setUsers(data);
-}
-
-    if (!users.length) {
+    if (!props.users.length) {
     return <p>Loading ...</p>;
     }
 
@@ -24,7 +12,7 @@ const loadUsersData = async() => {
         <React.Fragment>
         <h1>Users List</h1>
         <ul className={styles.Users}>
-            {users.map((user) =>(
+            {props.users.map((user) =>(
                 <User 
                  key={user.id}
                  id={user.id}
@@ -34,7 +22,9 @@ const loadUsersData = async() => {
                  address={user.address}
                  phone={user.phone}
                  website={user.website}
-                 company={user.company} />
+                 company={user.company}
+                 deleteUser={props.deleteUser}
+                 />
             ))}
         </ul>
         </React.Fragment>

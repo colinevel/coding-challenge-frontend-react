@@ -6,15 +6,12 @@ export default function PostComments(props) {
 
     const [comments, setComments] = useState([]);
 
-    const loadCommentsData = async() => {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${props.match.params.id}`);
-        const data = await response.json();
-        setComments(data);
-    }
-    
     useEffect(() => {
-        loadCommentsData();
-    }, []);
+        fetch(`https://jsonplaceholder.typicode.com/comments?postId=${props.match.params.id}`)
+        .then(res => res.json())
+        .then(json => setComments(json))
+        .catch(err => console.log(err))
+    });
 
     if (!comments.length) {
         return <p>Loading ...</p>;

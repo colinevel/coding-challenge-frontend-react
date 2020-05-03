@@ -7,14 +7,15 @@
 }
 
 button {
-  margin: 2vh auto;
-  padding: 1vh 2vw;
+  margin: 2vh 1vw;
+  padding: 1vh 0.6vw;
   background-color: rgb(20, 120, 219);
   border: none;
   color: white;
   text-align: center;
   font-size: 1rem;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 button:hover {

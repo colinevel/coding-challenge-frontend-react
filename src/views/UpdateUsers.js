@@ -20,7 +20,8 @@ export default withRouter(class UpdateUsers extends Component {
             .then(json => {
                 console.log("this is my json", json);
                 this.setState(json)
-            });
+            })
+            .catch(apiErr => console.log(apiErr));
       }
 
     handleSubmit = e => {
@@ -39,12 +40,11 @@ export default withRouter(class UpdateUsers extends Component {
         })
         })
         .then(res => res.json())
-        .then(json => console.log("this is my json", json))
+        .then(json => {console.log("this is my json", json)})
         .then(this.props.history.push({
             pathname: '/',
             }))
     }
-
 
     handleChange = e => {
     this.setState({
@@ -59,7 +59,8 @@ export default withRouter(class UpdateUsers extends Component {
         },
         company: {
             ...this.state.company,
-            [e.target.name]: e.target.value
+            name: e.target.companyName,
+            [e.target.name]: e.target.value,
           },
       });
     }
