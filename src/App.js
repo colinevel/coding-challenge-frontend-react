@@ -46,8 +46,6 @@ const deleteUser = async (id) => {
   // }
   // })
 
-
-
   return (
     <div className="App">
       <Switch>
