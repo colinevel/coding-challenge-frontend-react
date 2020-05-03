@@ -22,14 +22,10 @@ function App() {
     setUsers(data);
 }
 
-// This function deletes first the Comments related to the posts of the user, then the User and then the Posts of the User. Then it updates the state for users list.
+// This function deletes the User then it updates the state for users list.
 const deleteUser = async (id) => {
     let updatedUserList;
-    await deleteComments(id)  
-    .then(fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-      method: 'DELETE'
-      }))
-    .then(fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`, {
+    await (fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
       method: 'DELETE'
       }))
     .then(updatedUserList = users.filter(user =>user.id !== id))
@@ -37,18 +33,18 @@ const deleteUser = async (id) => {
     .catch(err => console.log(err))
 }
 
-  const deleteComments = (async(id) => {
-  const response = await fetch (`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
-  const data = await response.json();
-  console.log("this is my data", data);
-  for (let i=0; i<data.length; i++) {
-    let PostID = data[i].id
-    console.log("this is my index", PostID)
-    fetch(`https://jsonplaceholder.typicode.com/comments?postId=${PostID}`, {
-    method: 'DELETE'
-    })
-  }
-  })
+  // const deleteComments = (async(id) => {
+  // const response = await fetch (`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
+  // const data = await response.json();
+  // console.log("this is my data", data);
+  // for (let i=0; i<data.length; i++) {
+  //   let PostID = data[i].id
+  //   console.log("this is my index", PostID)
+  //   fetch(`https://jsonplaceholder.typicode.com/comments?postId=${PostID}`, {
+  //   method: 'DELETE'
+  //   })
+  // }
+  // })
 
 
 
