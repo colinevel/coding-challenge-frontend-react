@@ -18,7 +18,6 @@ function App() {
   const loadUsersData = async() => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await response.json();
-    console.log("balablala", data)
     setUsers(data);
 }
 
@@ -33,18 +32,22 @@ const deleteUser = async (id) => {
     .catch(err => console.log(err))
 }
 
-  // const deleteComments = (async(id) => {
-  // const response = await fetch (`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
-  // const data = await response.json();
-  // console.log("this is my data", data);
-  // for (let i=0; i<data.length; i++) {
-  //   let PostID = data[i].id
-  //   console.log("this is my index", PostID)
-  //   fetch(`https://jsonplaceholder.typicode.com/comments?postId=${PostID}`, {
-  //   method: 'DELETE'
-  //   })
-  // }
-  // })
+// const deletePosts = (async(id) => {
+//   await (fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+//       method: 'DELETE'
+//       }))
+
+// const deleteComments = (async(id) => {
+//   const response = await fetch (`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
+//   const data = await response.json();
+//   for (let i=0; i<data.length; i++) {
+//     let PostID = data[i].id
+//     console.log("this is my index", PostID)
+//     fetch(`https://jsonplaceholder.typicode.com/comments?postId=${PostID}`, {
+//     method: 'DELETE'
+//     })
+//   }
+//   })
 
   return (
     <div className="App">

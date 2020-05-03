@@ -44,6 +44,7 @@ export default withRouter(class UpdateUsers extends Component {
         .then(this.props.history.push({
             pathname: '/',
             }))
+        .catch(err => console.log(err))
     }
 
     handleChange = e => {
